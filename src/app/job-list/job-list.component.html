@@ -1,0 +1,87 @@
+<app-header></app-header>
+<section class="job-bg page job-list-page">
+  <div class="container">
+    <div class="breadcrumb-section">
+      <ol class="breadcrumb">
+        <li><a routerLink="dashboard">Home</a></li>
+        <li>Engineer/Architects</li>
+      </ol>
+
+
+
+
+
+
+      <div class="col-md-10 col-lg-10">
+        <div class="section job-list-item">
+          <div class="featured-top clearfix">
+            <h4>Live Joblist</h4>
+            
+          </div>
+          <table>
+            <tbody>
+              <tr *ngFor="let job of job_list ;let i = index;">
+                <td>{{ (i + 1) }}</td>
+                <div class="job-ad-item">
+                  <div class="item-info">
+                    <div class="item-image-box">
+                      <div class="item-image">
+                        <td>
+                          <a href="job-details.html"><img src="../../../assets/images/job/1.png" alt="Image"
+                              class="img-fluid"></a>
+                        </td>
+                      </div>
+                    </div>
+                    <div class="ad-info">
+                      <td>
+                        <span class="title">{{ job.title }}</span>
+                      </td>
+                      <div class="ad-meta">
+
+                        <td><i class="fa fa-map-marker" aria-hidden="true"></i>{{ job.location }} </td>&nbsp;
+                        <td><i class="fa fa-clock-o" aria-hidden="true"></i>{{ job.createdate }}</td>&nbsp;
+                        <td><i class="fa fa-money" aria-hidden="true"></i>{{ job.package }}</td>&nbsp;
+
+                      </div>
+                    </div>
+                    <div class="button">
+                      <a  class="btn btn-primary"  (click)="apply(job._id)">Apply Now</a>
+                    </div>
+                  </div>
+                </div>
+
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+
+          <!-- <div class="text-center">                               
+      <ul class="pagination ">
+        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+        <li><a href="#">1</a></li>
+        <li class="active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a>...</a></li>
+        <li><a href="#">10</a></li>
+        <li><a href="#">20</a></li>
+        <li><a href="#">30</a></li>
+        <li><a href="#"><i class="fa fa-chevron-right"></i>-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<app-footer></app-footer>

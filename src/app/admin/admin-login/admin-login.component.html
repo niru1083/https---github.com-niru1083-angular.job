@@ -1,0 +1,22 @@
+<section class="clearfix job-bg user-page">
+    <div class="container text-center">
+        <div class="user-account-content">
+            <div class="user-account">
+                <h2>Admin Login</h2>
+    
+            <form class="user" [formGroup]="user" (ngSubmit)="submit(user.value)" >
+                <div class="form-group">
+                        <input type="text" class="form-control" placeholder="email" formControlName="email">
+                </div>
+                <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                </div>
+                <input type="submit" value="login" class="btn btn-primary btn-user btn-block"   value="login">
+            </form>
+    
+            </div>
+        </div>
+    </div>
+    
+    </section>
+

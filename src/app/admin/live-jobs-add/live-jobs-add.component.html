@@ -1,0 +1,80 @@
+
+<div id="wrapper">
+    <app-header></app-header>
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Live Jobs</h1>
+                </div>
+
+                <form class="row" [formGroup]="job_list" (ngSubmit)="submit(job_list.value)">
+                    <input type="hidden" name="id" formControlName="id" />
+                   
+                    <div class="col-lg-4">
+                        companyid
+                        <input type="text" class="form-control" name="companyid" formControlName="companyid" />
+                    </div>
+                    <div class="col-lg-4">
+                        Title
+                        <input type="text" class="form-control" name="title" formControlName="title" />
+                    </div>
+                    <div class="col-lg-4">
+                        content
+                        <input type="text" class="form-control" name="content" formControlName="content" />
+                    </div>
+                    <div class="col-lg-4">
+                        description
+                        <input type="text" class="form-control" name="description" formControlName="description" />
+                    </div>
+                    <div class="col-lg-4">
+                        location
+                        <input type="text" class="form-control" name="location" formControlName="location" />
+                    </div>
+                    <div class="col-lg-4">location
+                        package
+                        <input type="text" class="form-control" name="package" formControlName="package" />
+                    </div>
+                    <div class="col-lg-4">
+                        createdate
+                        <input type="text" class="form-control" name="createdate" formControlName="createdate" />
+                    </div>
+                    <div class="col-lg-4">
+                        qualificationreq
+                        <input type="text" class="form-control" name="qualificationreq" formControlName="qualificationreq" />
+                    </div>
+                    <div class="col-lg-4">
+                        time
+                        <div>
+                            <select class="form-control" formControlName="time">
+                        
+                                <option value="Fulltime">Fulltime</option>
+                                <option value="partime">Partime</option>
+                            </select>
+                        </div>
+                    
+                        
+                        <!-- <input type="radio" class="form-control" name="time" formControlName="time" value="Fulltime"/>Fulltime
+                        <input type="radio" class="form-control" name="time" formControlName="time" value="Partime"/>Partime -->
+                    </div>
+                    
+                   
+                    <div class="col-lg-4">
+                        <br />
+                        <input type="submit" value="Save" class="btn btn-success" />
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- End of Footer -->
+        <app-footer></app-footer>
+
+    </div>
+    <!-- End of Content Wrapper -->

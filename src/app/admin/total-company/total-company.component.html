@@ -1,0 +1,86 @@
+<app-header></app-header>
+<div id="wrapper">
+    
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Job list
+                    </h1>
+                    <a class="btn btn-sm btn-success pull-right" routerLink="/live-jobs-add">+ Job list</a>
+                </div><br><br><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card shadow mb-12">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                          <tr>
+                                            <!-- <th>Action</th> -->
+                                            <th>No</th>
+                                            <th>name</th>
+                                            <th>address</th>
+                                            <th>city</th>
+                                            <th>contactperson</th>
+                                            <th>contactno</th>
+                                            <th>description</th>
+                                            
+                                            <th>Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr *ngFor="let job of company ;let i = index;">
+                                            <!-- <td>
+                                              <a class="btn btn-sm btn-primary" routerLink="/admin/document/{{ job_list._id }}"><i
+                                                  class="fas fa-edit"></i></a>&nbsp;
+                                            </td> -->
+                                            <td>{{ (i + 1) }}</td>
+                                            <td>{{ job.name }}</td>
+                                            <td>{{ job.address}}</td>
+                                            <td>{{ job.city }}</td>
+                                            <td>{{ job.contactperson }}</td>
+                                            <td>{{ job.contactno }}</td>
+                                            <td>{{ job.description }}</td>
+                                              
+                                             <td>
+                                              <!-- <a class="btn btn-sm btn-primary" routerLink="/live-jobs-add/{{ job._id }}"><i class="fas fa-edit"></i></a>&nbsp; -->
+                                              <button (click)="delete(job._id)" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                             </td> 
+                                              
+                                              
+                                              
+                                              
+                                          </tr>
+                                        </tbody>
+                                      </table>
+              
+              
+              
+              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+                
+        <!-- End of Footer -->
+        <app-footer></app-footer>
+
+    </div>
+    <!-- End of Content Wrapper -->
+</div>
+

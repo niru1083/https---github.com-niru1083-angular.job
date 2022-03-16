@@ -1,0 +1,41 @@
+<header id="header" class="fixed-top">
+  <nav class="navbar navbar-default navbar-expand-lg" style="background-color: rgb(0, 0, 0); margin-bottom: -50px;">
+    <div class="container" style="background-color: rgb(0, 0, 0) mb; ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-align-justify"></i></span>
+      </button>
+      <a class="navbar-brand" routerLink="dashboard"><img class="" src="/src/assets/images/ilogo.png" alt=""></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav-right " style="background-color: transparent">
+          <li class="sign-in "><a routerLink="/" routerLinkActive="true">Home</a></li>&nbsp;&nbsp;&nbsp;
+          <li class="sign-in "><a routerLink="/about" routerLinkActive="true">About</a></li>&nbsp;&nbsp;&nbsp;
+          <li class="sign-in"><a routerLink="/job-list" routerLinkActive="true">Current Openings</a></li>
+          &nbsp;&nbsp;&nbsp;
+          <li class="sign-in"><a routerLink="/contact" routerLinkActive="true">Contact US</a></li>&nbsp;&nbsp;&nbsp;
+
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul class="collapse navbar-collapse">
+          <li *ngIf="userloggedin">
+            <i class="fa fa-user"></i>&nbsp;
+            <div class="sign-in" routerlinkActive="true">
+
+              <a style="cursor: pointer; " class="sign-in" routerlinkActive="true"
+                (click)="logout()">{{ name }}(Logout)</a>
+            </div>
+          </li>
+          <li *ngIf="!userloggedin">
+            <i class="fa fa-user"></i>&nbsp;
+            <a class="sign-in" routerlinkActive="true" routerLink="/login">Login</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+  </nav>
+</header>

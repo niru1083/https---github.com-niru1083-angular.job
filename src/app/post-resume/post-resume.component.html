@@ -1,0 +1,161 @@
+<app-header></app-header>
+<section class=" job-bg ad-details-page">
+  <div class="container">
+    <div class="breadcrumb-section">
+
+      <ol class="breadcrumb">
+        <li><a routerLink="">Home</a></li>
+        <li>Post Resume</li>
+      </ol>
+      <h2 class="title">Post My Resume</h2>
+    </div>
+    <div class="job-postdetails post-resume">
+      <div class="row">
+        <div class="col-lg-8 clearfix">
+          <form action="#" [formGroup]="resume" (ngSubmit)="submit(resume.value)">
+            <fieldset>
+              <input type="hidden" name="id" formControlName="id" />
+
+              <div formControlName="joblistid" >
+
+                    {{joblistid}} 
+               </div>
+              <div class="section express-yourself">
+                <h4>Express Yourself</h4>
+                <div class="row form-group">
+                  <label class="col-sm-4 label-title">Full Name</label>
+                  <div class="col-sm-8">
+                    <input type="text" name="name" class="form-control" placeholder="ex Jhon Doe"
+                      formControlName="name">
+                  </div>
+                </div>
+                <div class="row form-group additional-information">
+                  <label class="col-sm-4 label-title">Additional Information</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control"  name="AdditionalInformation"
+                    formControlName="AdditionalInformation"
+                      placeholder="Address: 123 West 12th Street, Suite 456 New York, NY 123456\n Phone: +012 345 678 910 \n Email: itsme@surzilegeek.com*"></textarea>
+                  </div>
+                </div>
+                <div class="row form-group photos-resume">
+                  <label class="col-sm-4 label-title" name="photocode" formControlName="photocode">Photos for your
+                    Resume</label>
+                  <div class="col-sm-8 ">
+                    <label class="upload-image left" for="upload-image-one">
+                      <input type="file" id="upload-image-one">
+                      Type: JPG, PNG Size: 3.5 x 4.5 cm
+                    </label>
+                    <label class="upload-image" for="upload-image-two">
+                      <input type="file" id="upload-image-two">
+                      Upload Photo
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="section career-objective">
+                <h4>Career Objective</h4>
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Write few lines about your career objective" rows="8"
+                    name="objective" formControlName="objective"></textarea>
+                </div>
+                <span>5000 characters left</span>
+              </div>
+
+              <div class="section company-information">
+                <h4>Personal Deatils</h4>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title" name="fullname" formControlName="fullname">Full Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="name" class="form-control" placeholder="Jhon Doe">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title">Father's Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="name" class="form-control" placeholder="Robert Doe" name="fullname"
+                      formControlName="Fathername">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title">Mother's Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="name" class="form-control" placeholder="Ismatic Roderos Doe"
+                      name="mothername" formControlName="mothername">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title">Date of Birth</label>
+                  <div class="col-sm-9">
+                    <input type="date" name="name" class="form-control" placeholder="26/01/1982" name="bdate"
+                      formControlName="bdate">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title">Birth Place</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="name" class="form-control" placeholder="United State of America"
+                      name="bplace" formControlName="bplace">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title">Nationality</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="name" class="form-control" placeholder="Canadian" name="nationality"
+                      formControlName="nationality">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title">Sex</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="sex" class="form-control" placeholder="Male" formControlName="sex">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-3 label-title">Address</label>
+                  <div class="col-sm-9">
+                    <input type="text" name="address" class="form-control"
+                      placeholder="121 King Street, Melbourne Victoria, 1200 USA" formControlName="address">
+                  </div>
+                </div>
+                <div class="buttons pull-right">
+                  <a href="#" class="btn">Add New Feild</a>
+                </div>
+              </div>
+              <div class="section special-qualification">
+                <h4>Declaration</h4>
+                <div class="form-group item-description">
+                  <textarea class="form-control" placeholder="" rows="8" formControlName="declaration"></textarea>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+          <div class="buttons">
+            <a href="#" class="btn">Update Profile</a>
+            <a routerLink="" class="btn cancle">Cancle</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="section quick-rules">
+            <h4>Quick rules</h4>
+            <p class="lead">Posting an ad on <a routerLink="/">Online jobs</a> is free! However, all ads must follow our
+              rules:
+            </p>
+            <ul>
+              <li>Make sure you post in the correct category.</li>
+              <li>Do not post the same ad more than once or repost an ad within 48 hours.</li>
+              <li>Do not upload pictures with watermarks.</li>
+              <li>Do not post ads containing multiple items unless it's a package deal.</li>
+              <li>Do not put your email or phone numbers in the title or description.</li>
+              <li>Make sure you post in the correct category.</li>
+              <li>Do not post the same ad more than once or repost an ad within 48 hours.</li>
+              <li>Do not upload pictures with watermarks.</li>
+              <li>Do not post ads containing multiple items unless it's a package deal.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
